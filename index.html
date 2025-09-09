@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+		<section class="container">
+			<h1>Todo List</h1>
+
+			<div class="buttons">
+				<button id="addButton" class="btn btn-positive">Add task</button>
+				<button id="exportBtn" class="btn">Export JSON</button>
+				<button id="importBtn" class="btn">Import JSON</button>
+				<input type="file" id="importFile" style="display:none" accept=".json">
+			</div>
+
+			<ul id="todoList"></ul>
+
+			<dialog id="todoDialog">
+				<form method="dialog" id="todoForm">
+					<div class="form-row">
+						<label for="titleInput">Task</label>
+						<input id="titleInput" required>
+					</div>
+					<div class="form-row">
+						<label for="descInput">Description</label>
+						<textarea id="descInput" rows="3"></textarea>
+					</div>
+					<div class="form-row">
+						<label for="dateInput">Due Date (optional)</label>
+						<input id="dateInput" type="date">
+					</div>
+					<menu>
+						<button class="btn" value="cancel">Cancel</button>
+						<button id="saveButton" class="btn btn-positive" value="default">Save</button>
+					</menu>
+				</form>
+			</dialog>
+		</section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
